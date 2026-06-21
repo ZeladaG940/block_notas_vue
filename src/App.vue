@@ -161,28 +161,30 @@ body {
   }
 }
 
-/* En pantallas chicas (celulares), se adapta para usar el 100% automáticamente */
-@media (max-width: 1050px) {
-  .contenedor-centrado-app {
-    max-width: 100%;
-    box-shadow: none;
-  }
-  .navbar {
-    padding: 15px 20px;
-  }
-  .contenido-principal {
-    padding: 20px;
-  }
-}
+  @media (max-width: 1050px) {
+    .contenedor-centrado-app {
+      max-width: 100%;
+      min-height: 100vh;
+      box-shadow: none;
+      /* Eliminamos bordes laterales innecesarios */
+      padding: 0; 
+    }
+    
+    .navbar {
+      padding: 15px 15px; /* Reducimos el padding lateral para ganar espacio */
+    }
 
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
+    .contenido-principal {
+      padding: 15px; /* El contenido se ajusta mejor al ancho de la pantalla */
+    }
+    
+    /* Ajuste para que el texto del logo no se vea diminuto */
+    .app-name {
+      font-size: 1.1rem;
+    }
+    
+    .industry-tag {
+      font-size: 0.8rem;
+    }
   }
-  .nav-menu {
-    width: 100%;
-    justify-content: space-around;
-  }
-}
 </style>
