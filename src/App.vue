@@ -12,31 +12,19 @@
     
     <div class="contenedor-centrado-app">
       
-      <nav class="navbar">
-        <div class="nav-logo">
-          📝 <span>TaskApp</span>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <div class="logo-container">
+          📝 <span class="app-name">TaskApp</span>
+          <span class="industry-tag">| industria.ORL</span>
         </div>
-        <div class="nav-menu">
-          <button 
-            :class="['nav-link', { activo: pestanaActiva === 'inicio' }]" 
-            @click="pestanaActiva = 'inicio'"
-          >
-            🏠 Inicio
-          </button>
-          <button 
-            :class="['nav-link', { activo: pestanaActiva === 'crear' }]" 
-            @click="pestanaActiva = 'crear'"
-          >
-            ➕ Crear Nota
-          </button>
-          <button 
-            :class="['nav-link', { activo: pestanaActiva === 'buscar' }]" 
-            @click="pestanaActiva = 'buscar'"
-          >
-            🔍 Buscar / Editar
-          </button>
-        </div>
-      </nav>
+      </div>
+      <div class="nav-menu">
+        <button :class="['nav-link', { activo: pestanaActiva === 'inicio' }]" @click="pestanaActiva = 'inicio'">🏠 Inicio</button>
+        <button :class="['nav-link', { activo: pestanaActiva === 'crear' }]" @click="pestanaActiva = 'crear'">➕ Crear Nota</button>
+        <button :class="['nav-link', { activo: pestanaActiva === 'buscar' }]" @click="pestanaActiva = 'buscar'">🔍 Buscar / Editar</button>
+      </div>
+    </nav>
 
       <main class="contenido-principal">
         <div class="vista-componente">
